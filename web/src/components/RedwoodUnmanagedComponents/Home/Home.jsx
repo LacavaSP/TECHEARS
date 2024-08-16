@@ -9,14 +9,15 @@ import UltimosAcessosComponent from '../UltimosAcessosComponent/UltimosAcessosCo
 
 import 'leaflet/dist/leaflet.css'
 import { useState, useEffect } from 'react'
+
 import customTechEarsNodeRedAxios from 'src/global/customTechEarsNodeRedAxios'
+
 import MapComponentFiliais from './mapaFiliais/MapComponentFiliais'
 const Home = (props) => {
   const [centroDoMapa, setCentroDoMapa] = useState(null)
   const [podeExibirMapa, setPodeExibirMapa] = React.useState(true)
   const [filiais, setFiliais] = React.useState([])
   useEffect(() => {
-
     pegaLocalizacaoDoUsuario()
     obterFiliais()
   }, [])
